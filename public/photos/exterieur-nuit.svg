@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Fourgon aménagé de nuit, auvent déployé</title>
+  <rect width="800" height="600" fill="#2b2620"/>
+  <rect x="150" y="260" width="500" height="180" rx="20" fill="#a8532f"/>
+  <rect x="150" y="200" width="500" height="20" fill="#e4d2b8"/>
+  <circle cx="700" cy="120" r="40" fill="#f1e4d3"/>
+  <rect x="200" y="300" width="90" height="70" rx="8" fill="#f1e4d3" opacity="0.8"/>
+  <text x="400" y="540" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#f1e4d3">Photo à venir — exterieur-nuit.svg</text>
+</svg>

@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-terracotta: #1f6f78;
+  --color-terracotta-light: #7fb3b8;
+  --color-terracotta-dark: #123f45;
+  --color-sauge: #8a9a7e;
+  --color-sauge-light: #c1cdb8;
+  --color-sauge-dark: #5f6e55;
+  --color-sable: #f1e4d3;
+  --color-sable-dark: #e4d2b8;
+  --color-cream: #fbf7f1;
+  --color-ink: #2b2620;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-terracotta: var(--color-terracotta);
+  --color-terracotta-light: var(--color-terracotta-light);
+  --color-terracotta-dark: var(--color-terracotta-dark);
+  --color-sauge: var(--color-sauge);
+  --color-sauge-light: var(--color-sauge-light);
+  --color-sauge-dark: var(--color-sauge-dark);
+  --color-sable: var(--color-sable);
+  --color-sable-dark: var(--color-sable-dark);
+  --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
+  --font-display: var(--font-poppins);
+  --font-sans: var(--font-inter);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-fade-up: fade-up 0.7s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(1.25rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), sans-serif;
+}
+
+/* Scroll-reveal : masqué par défaut, révélé en JS via ScrollReveal (IntersectionObserver) */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }

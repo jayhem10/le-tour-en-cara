@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Fourgon garé face à un paysage de montagne</title>
+  <rect width="800" height="600" fill="#c1cdb8"/>
+  <polygon points="0,420 200,240 380,420" fill="#8a9a7e"/>
+  <polygon points="300,420 520,220 760,420" fill="#5f6e55"/>
+  <rect y="420" width="800" height="180" fill="#e4d2b8"/>
+  <rect x="220" y="330" width="360" height="130" rx="20" fill="#c96f4a"/>
+  <circle cx="290" cy="470" r="30" fill="#2b2620"/>
+  <circle cx="520" cy="470" r="30" fill="#2b2620"/>
+  <text x="400" y="560" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#2b2620">Photo à venir — exterieur-2.svg</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Vue extérieure du fourgon</title>
+  <rect width="800" height="600" fill="#f1e4d3"/>
+  <rect y="460" width="800" height="140" fill="#c1cdb8"/>
+  <rect x="260" y="260" width="280" height="80" rx="16" fill="#c96f4a"/>
+  <rect x="280" y="278" width="60" height="44" rx="6" fill="#fbf7f1"/>
+  <circle cx="300" cy="340" r="20" fill="#2b2620"/>
+  <circle cx="500" cy="340" r="20" fill="#2b2620"/>
+  <text x="400" y="560" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#5f6e55">Photo à venir — exterieur-1.svg</text>
+</svg>
