@@ -26,6 +26,8 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|robots.txt|login|api/login|api/logout).*)",
+    // photos/globe.png restent accessibles sans session : nécessaires pour que l'aperçu og:image
+    // fonctionne quand le lien est partagé (le crawler n'a pas de cookie de session).
+    "/((?!_next/static|_next/image|favicon.ico|robots.txt|login|api/login|api/logout|photos|globe.png).*)",
   ],
 };
