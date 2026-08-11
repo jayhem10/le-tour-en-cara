@@ -15,9 +15,14 @@ const navLinks = [
 /** Nav sticky avec ancres, visible en haut de chaque section. */
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-sable-dark/50 bg-cream/90 backdrop-blur-md">
+    <header className="border-b border-sable-dark/50 bg-cream/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href="#top" className="font-display text-lg font-semibold text-terracotta-dark">
+        <Link
+          href="#top"
+          className="inline-flex items-center gap-2 font-display text-lg font-semibold text-terracotta-dark"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element -- image locale, next/image via /_next/image ne se résout pas ici */}
+          <img src="/globe.png" alt="" width={20} height={20} className="shrink-0" aria-hidden />
           {siteConfig.general.vanName}
         </Link>
 

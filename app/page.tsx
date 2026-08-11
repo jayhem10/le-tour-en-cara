@@ -1,6 +1,7 @@
 import { siteConfig } from "@/config/site";
 import { MessageCircle, Quote } from "lucide-react";
 import { Header } from "@/components/Header";
+import { PioneerReminderBanner } from "@/components/PioneerReminderBanner";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Gallery } from "@/components/Gallery";
@@ -28,7 +29,10 @@ function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) 
 export default function Home() {
   return (
     <>
-      <Header />
+      <div className="sticky top-0 z-40">
+        <PioneerReminderBanner />
+        <Header />
+      </div>
       <main className="flex-1">
         <Hero />
 

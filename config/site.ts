@@ -10,9 +10,11 @@ import {
   Car,
   Droplet,
   FlaskConical,
+  Flame,
   Fuel,
   Gauge,
   Home,
+  Lock,
   MapPin,
   Power,
   PowerOff,
@@ -183,7 +185,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   general: {
-    vanName: "Le Tour en Cara",
+    vanName: "Le Tour en Cara'",
     model: "Weinsberg 600 MQH",
     year: 2021,
     tagline: "Bienvenue à bord du Weinsberg CaraTour 600.",
@@ -211,7 +213,7 @@ export const siteConfig: SiteConfig = {
     intro: "Bienvenue à bord !",
     paragraphs: [
       "Nous sommes Émilie, Jérémy et notre petite Ysaé, qui vient tout juste de souffler sa première bougie. Et il y a aussi Jiska, notre gros nounours, un adorable Bouvier Bernois.",
-      "Nous avons équipé ce Weinsberg CaraTour 600 comme un petit chez-nous sur roues : de quoi voyager confortablement, avec quelques attentions en plus qui font la différence (linge de lit, kit de vaisselle, machine à café portable, guide des plus beaux villages de France...).",
+      "Nous avons craqué pour ce Weinsberg CaraTour 600 comme on craque pour un rêve : l'envie de prendre la route, de dormir là où bon nous semble et de vivre au rythme du voyage, où qu'il nous mène.",
       "Nous avons à cœur de vous confier notre fourgon dans les meilleures conditions, et de partager avec vous un peu de cet esprit de liberté que nous aimons tant dans le voyage en van. Bonne route !",
     ],
     quote: "Le bonheur n'est pas une destination à atteindre, mais une façon de voyager.",
@@ -409,8 +411,12 @@ export const siteConfig: SiteConfig = {
       text: "Déchets jetables dans nos containers à votre retour : plastique dans un sac ouvert et non recyclable dans une poubelle fermée",
     },
     {
+      icon: Bath,
+      text: "Videz la cassette des toilettes et remettez de l'eau avec un peu de liquide vaisselle dedans",
+    },
+    {
       icon: Utensils,
-      text: "Videz la caissette de vaisselle et remettez de l'eau et du produit vaisselle dedans. S'il reste de la vaisselle sale, laissez-la dans l'évier, on la passera au lave-vaisselle à la maison.",
+      text: "S'il reste de la vaisselle sale, laissez-la dans l'évier, on la passera au lave-vaisselle à la maison",
     },
     {
       icon: AlertTriangle,
@@ -423,13 +429,30 @@ export const siteConfig: SiteConfig = {
       icon: PowerOff,
       title: "Autoradio Pioneer : pensez à couper l'alimentation",
       description:
-        "Après utilisation, remettez bien le réglage d'alimentation de l'autoradio Pioneer sur 0. Laissé allumé (même en veille), il continue de consommer du courant et peut vider la batterie du fourgon.",
+        "Après utilisation, remettez bien le réglage d'alimentation de l'autoradio Pioneer sur 0. Laissé allumé (même en veille), il continue de consommer du courant et peut vider la batterie du fourgon, rendant le démarrage impossible.",
     },
     {
       icon: AlertTriangle,
       title: "Voyant AdBlue ou voyant huile allumé ? Prévenez-nous",
       description:
         "Si un voyant AdBlue ou niveau d'huile s'allume sur le tableau de bord pendant votre location, merci de nous prévenir rapidement afin qu'on puisse s'en occuper.",
+    },
+    {
+      icon: Flame,
+      title: "Bouteille de gaz : robinet laissé ouvert",
+      description:
+        "Le robinet de la bouteille de gaz reste ouvert en temps normal. Vous pouvez le fermer si vous le souhaitez : il se trouve derrière la porte à gauche du coffre.",
+    },
+    {
+      icon: ArrowUpDown,
+      title: "Toit relevable (popup) : attention à l'ouverture et à la fermeture",
+      description:
+        "À l'ouverture, la popup prend pas mal de hauteur : vérifiez qu'aucun obstacle ne gêne, pour ne pas l'abîmer ni endommager le panneau solaire. À la fermeture, verrouillez bien la partie métallique sans coincer la bâche, et enclenchez toutes les boucles à clip.",
+    },
+    {
+      icon: Lock,
+      title: "Avant de prendre la route : fenêtres et lanterneaux",
+      description: "Pensez à bien verrouiller les fenêtres et à fermer les lanterneaux avant de démarrer.",
     },
   ],
 

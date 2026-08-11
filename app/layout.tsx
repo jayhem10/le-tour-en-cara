@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   title: "Le Tour en Cara — Fourgon aménagé Weinsberg Caratour 600",
   description:
     "Site privé pour les locataires du fourgon aménagé Weinsberg Caratour 600 : présentation, équipements et accès Park4night.",
+  icons: {
+    icon: "/globe.png",
+  },
   robots: {
     index: false,
     follow: false,

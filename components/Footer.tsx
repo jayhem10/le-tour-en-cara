@@ -24,8 +24,10 @@ export function Footer() {
   return (
     <footer className="border-t border-sable-dark/50 bg-sable/40 py-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 text-center text-sm text-ink/60 sm:px-6">
-        <p>
-          © {new Date().getFullYear()} {siteConfig.general.vanName}. Site privé réservé aux locataires.
+        <p className="inline-flex items-center gap-1.5">
+          {/* eslint-disable-next-line @next/next/no-img-element -- image locale, next/image via /_next/image ne se résout pas ici */}
+          <img src="/globe.png" alt="" width={14} height={14} className="shrink-0" aria-hidden />©{" "}
+          {new Date().getFullYear()} {siteConfig.general.vanName}. Site privé réservé aux locataires.
         </p>
         <button
           type="button"
