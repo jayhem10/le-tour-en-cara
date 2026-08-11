@@ -351,8 +351,8 @@ export const siteConfig: SiteConfig = {
       name: "Park4night",
       description: "Trouvez des aires et spots de stationnement pour camping-cars et fourgons partout en Europe.",
       icon: MapPin,
-      appStoreUrl: "https://apps.apple.com/fr/app/park4night/id946159729",
-      googlePlayUrl: "https://play.google.com/store/apps/details?id=com.park4night.android",
+      appStoreUrl: "https://apps.apple.com/fr/app/park4night/id430946556",
+      googlePlayUrl: "https://play.google.com/store/apps/details?id=fr.tramb.park4night",
     },
     {
       id: "lfp-block",
