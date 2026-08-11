@@ -441,7 +441,7 @@ export const siteConfig: SiteConfig = {
       icon: Flame,
       title: "Bouteille de gaz : robinet laissé ouvert",
       description:
-        "Le robinet de la bouteille de gaz reste ouvert en temps normal. Vous pouvez le fermer si vous le souhaitez : il se trouve derrière la porte à gauche du coffre.",
+        "Le robinet de la bouteille de gaz reste ouvert en temps normal. Vous pouvez le fermer si vous le souhaitez : il se trouve dans le coffre dans la trappe de gauche.",
     },
     {
       icon: ArrowUpDown,
@@ -497,7 +497,7 @@ export const siteConfig: SiteConfig = {
         {
           icon: Sun,
           label: "Luminosité",
-          description: "Règle la luminosité de l'écran du panneau.",
+          description: "Active ou coupe l'éclairage des différents espaces du fourgon.",
         },
       ],
     },
