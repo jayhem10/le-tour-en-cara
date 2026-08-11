@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 // Polices auto-hébergées (fichiers dans /fonts) plutôt que next/font/google :
@@ -80,7 +81,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="fr"
       className={`${poppins.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-cream text-ink">{children}</body>
+      <body className="min-h-full flex flex-col bg-cream text-ink">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
