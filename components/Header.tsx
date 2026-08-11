@@ -22,7 +22,7 @@ export function Header() {
           className="inline-flex items-center gap-2 font-display text-lg font-semibold text-terracotta-dark"
         >
           {/* eslint-disable-next-line @next/next/no-img-element -- image locale, next/image via /_next/image ne se résout pas ici */}
-          <img src="/globe.png" alt="" width={20} height={20} className="shrink-0" aria-hidden />
+          <img src="/globe.png" alt="" width={22} height={22} className="shrink-0" aria-hidden />
           {siteConfig.general.vanName}
         </Link>
 

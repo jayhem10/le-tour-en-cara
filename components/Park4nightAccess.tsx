@@ -1,16 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import { Eye, EyeOff, Info, Loader2, MapPin, Star } from "lucide-react";
+import { Eye, EyeOff, HelpCircle, Info, KeyRound, Leaf, Loader2, MapPin, SignpostBig, Star } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { CopyButton } from "@/components/ui/CopyButton";
 import { HowItWorks } from "@/components/HowItWorks";
 
 const usageRules = [
-  "Ces identifiants restent valables pendant toute la durée de votre location.",
-  "Comme pour tout logement de vacances, on laisse les lieux aussi propres qu'on les a trouvés.",
-  "Les règles de stationnement changent d'un endroit à l'autre, un coup d'œil rapide évite les mauvaises surprises.",
-  "En cas de doute sur un spot, les avis récents et les emplacements officiels restent la valeur sûre.",
+  { icon: KeyRound, text: "Ces identifiants sont les vôtres pendant toute la durée du séjour, gardez-les pour vous." },
+  {
+    icon: Leaf,
+    text: "On aime laisser la nature aussi belle qu'on l'a trouvée : un réflexe simple qui profite à tout le monde.",
+  },
+  {
+    icon: SignpostBig,
+    text: "Les règles de stationnement varient d'un lieu à l'autre : un coup d'œil avant de s'installer, et c'est réglé.",
+  },
+  {
+    icon: HelpCircle,
+    text: "Un doute sur un spot ? Les avis récents et les emplacements officiels sont vos meilleurs alliés.",
+  },
 ];
 
 const login = process.env.NEXT_PUBLIC_PARK4NIGHT_LOGIN ?? "Non configuré";
@@ -103,10 +112,16 @@ export function Park4nightAccess() {
             <Info className="h-5 w-5 shrink-0 text-sauge-dark" aria-hidden />
             <div>
               <p className="mb-1 text-sm font-semibold text-sauge-dark">Bonnes pratiques</p>
-              <ul className="space-y-1 text-sm text-ink/70">
-                {usageRules.map((rule) => (
-                  <li key={rule}>{rule}</li>
-                ))}
+              <ul className="space-y-2">
+                {usageRules.map((rule) => {
+                  const Icon = rule.icon;
+                  return (
+                    <li key={rule.text} className="flex items-start gap-2 text-sm text-ink/70">
+                      <Icon className="mt-0.5 h-4 w-4 shrink-0 text-sauge-dark" aria-hidden />
+                      {rule.text}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
