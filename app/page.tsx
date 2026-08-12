@@ -1,7 +1,7 @@
 import { siteConfig } from "@/config/site";
 import { MessageCircle, Quote } from "lucide-react";
 import { Header } from "@/components/Header";
-import { PioneerReminderBanner } from "@/components/PioneerReminderBanner";
+import { KenwoodReminderBanner } from "@/components/KenwoodReminderBanner";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Gallery } from "@/components/Gallery";
@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       <div className="sticky top-0 z-40">
-        <PioneerReminderBanner />
+        <KenwoodReminderBanner />
         <Header />
       </div>
       <main className="flex-1">

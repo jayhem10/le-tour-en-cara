@@ -427,9 +427,9 @@ export const siteConfig: SiteConfig = {
   importantTips: [
     {
       icon: PowerOff,
-      title: "Autoradio Pioneer : pensez à couper l'alimentation",
+      title: "Autoradio Kenwood : pensez à couper l'alimentation",
       description:
-        "Après utilisation, remettez bien le réglage d'alimentation de l'autoradio Pioneer sur 0. Laissé allumé (même en veille), il continue de consommer du courant et peut vider la batterie du fourgon, rendant le démarrage impossible.",
+        "Après utilisation, remettez bien le réglage d'alimentation de l'autoradio Kenwood sur 0. Laissé allumé (même en veille), il continue de consommer du courant et peut vider la batterie du fourgon, rendant le démarrage impossible.",
     },
     {
       icon: AlertTriangle,
