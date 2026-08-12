@@ -19,6 +19,7 @@ import {
   Power,
   PowerOff,
   Recycle,
+  Route,
   Ruler,
   Settings2,
   ShieldCheck,
@@ -30,6 +31,7 @@ import {
   Users,
   Utensils,
   Weight,
+  Wind,
   Zap,
 } from "lucide-react";
 
@@ -361,6 +363,22 @@ export const siteConfig: SiteConfig = {
       icon: BatteryCharging,
       appStoreUrl: "https://apps.apple.com/fr/app/lfpblock/id1548404075",
       androidNote: "Disponible sur Android via APK (nous contacter pour le lien de téléchargement).",
+    },
+    {
+      id: "polarsteps",
+      name: "Polarsteps",
+      description: "Suivez et partagez votre itinéraire de voyage automatiquement, avec une carte de votre trajet.",
+      icon: Route,
+      appStoreUrl: "https://apps.apple.com/us/app/polarsteps/id947925763",
+      googlePlayUrl: "https://play.google.com/store/apps/details?id=com.polarsteps",
+    },
+    {
+      id: "windy",
+      name: "Windy",
+      description: "Consultez les prévisions météo et de vent détaillées avant de prendre la route ou de vous installer.",
+      icon: Wind,
+      appStoreUrl: "https://apps.apple.com/app/windy-weather-radar-forecast/id1161387262",
+      googlePlayUrl: "https://play.google.com/store/apps/details?id=com.windyty.android",
     },
   ],
 
