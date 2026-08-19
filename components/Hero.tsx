@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 /** Grande photo, titre accrocheur, invite à découvrir la suite. */
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section id="top" className="relative overflow-hidden sm:h-screen">
       {/* eslint-disable-next-line @next/next/no-img-element -- SVG local, next/image nécessiterait dangerouslyAllowSVG */}
       <img
         src={siteConfig.gallery[0]?.src}
@@ -13,7 +13,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-linear-to-t from-ink/90 via-ink/55 to-ink/25" aria-hidden />
 
-      <div className="relative mx-auto flex min-h-[65vh] max-w-6xl flex-col justify-between gap-6 px-4 pb-16 pt-32 sm:min-h-[92vh] sm:px-6">
+      <div className="relative mx-auto flex min-h-[65vh] max-w-6xl flex-col justify-between gap-6 px-4 pb-16 pt-32 sm:h-full sm:px-6">
         <div className="flex flex-col gap-4">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-sable drop-shadow-md">
             {siteConfig.general.model}

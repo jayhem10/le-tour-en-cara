@@ -29,19 +29,19 @@ function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) 
 export default function Home() {
   return (
     <>
-      <div className="sticky top-0 z-40">
+      <div className="fixed inset-x-0 top-0 z-40">
         <KenwoodReminderBanner />
         <Header />
       </div>
       <main className="flex-1">
         <Hero />
 
-        <section id="apropos" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <section id="apropos" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
           <SectionHeading eyebrow="La famille" title="À propos de ce fourgon aménagé" />
           <About />
         </section>
 
-        <section id="fourgon" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <section id="fourgon" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
           <SectionHeading eyebrow="Présentation" title="Le fourgon" />
           <ScrollReveal className="mx-auto mb-12 max-w-3xl text-center text-lg text-ink/70">
             {siteConfig.general.description}
@@ -49,31 +49,31 @@ export default function Home() {
           <Gallery photos={siteConfig.gallery} />
         </section>
 
-        <section id="caracteristiques" className="bg-white/60 px-4 py-20 sm:px-6">
+        <section id="caracteristiques" className="bg-white/60 scroll-mt-20 px-4 py-20 sm:px-6">
           <div className="mx-auto max-w-6xl">
             <SectionHeading eyebrow="Specs" title="Caractéristiques techniques" />
             <Specs />
           </div>
         </section>
 
-        <section id="equipements" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <section id="equipements" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
           <SectionHeading eyebrow="Confort" title="Équipements inclus" />
           <Equipment />
         </section>
 
-        <section id="conseils" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <section id="conseils" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
           <SectionHeading eyebrow="Bon à savoir" title="Conseils pratiques" />
           <VanTips />
         </section>
 
-        <section id="apps" className="bg-white/60 px-4 py-20 sm:px-6">
+        <section id="apps" className="bg-white/60 scroll-mt-20 px-4 py-20 sm:px-6">
           <div className="mx-auto max-w-6xl">
             <SectionHeading eyebrow="Pendant le séjour" title="Apps recommandées" />
             <AppsRecommended />
           </div>
         </section>
 
-        <section id="park4night" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <section id="park4night" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
           <SectionHeading eyebrow="Trouver un spot" title="Accès Park4night" />
           <Park4nightAccess />
         </section>
@@ -83,7 +83,7 @@ export default function Home() {
           <RentalTerms />
         </section>
 
-        <section id="contact" className="bg-white/60 px-4 py-20 sm:px-6">
+        <section id="contact" className="bg-white/60 scroll-mt-20 px-4 py-20 sm:px-6">
           <SectionHeading eyebrow="On se parle ?" title="Contact" />
           <Contact />
         </section>
