@@ -415,7 +415,7 @@ export const siteConfig: SiteConfig = {
   },
 
   returnGuidelines: [
-    { icon: Fuel, text: "Réservoir de carburant à moitié plein" },
+    { icon: Fuel, text: "Réservoir de carburant complété comme au départ" },
     { icon: Sparkles, text: "Fourgon nettoyé, rendu propre" },
     { icon: Droplet, text: "Eaux usées vidangées" },
     { icon: Trash2, text: "Affaires personnelles et déchets retirés" },
