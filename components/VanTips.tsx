@@ -12,7 +12,7 @@ export function VanTips() {
           return (
             <ScrollReveal key={tip.title} delay={index * 60}>
               <div className="flex items-start gap-3 rounded-2xl border-2 border-terracotta/40 bg-terracotta-light/15 p-4 sm:p-5">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-terracotta text-cream">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-terracotta-light/40 text-terracotta-dark">
                   <Icon className="h-5 w-5" aria-hidden />
                 </span>
                 <div className="min-w-0">

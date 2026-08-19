@@ -214,9 +214,9 @@ export const siteConfig: SiteConfig = {
     ownerNames: "Émilie, Jérémy, Ysaé & Jiska",
     intro: "Bienvenue à bord !",
     paragraphs: [
-      "Nous sommes Émilie, Jérémy et notre petite Ysaé, qui vient tout juste de souffler sa première bougie. Et il y a aussi Jiska, notre gros nounours, un adorable Bouvier Bernois.",
-      "Nous avons craqué pour ce Weinsberg CaraTour 600 comme on craque pour un rêve : l'envie de prendre la route, de dormir là où bon nous semble et de vivre au rythme du voyage, où qu'il nous mène.",
-      "Nous avons à cœur de vous confier notre fourgon dans les meilleures conditions, et de partager avec vous un peu de cet esprit de liberté que nous aimons tant dans le voyage en van. Bonne route !",
+      "Nous sommes Émilie et Jérémy, parents d'Ysaé (qui vient de fêter son premier anniversaire) et de Jiska, notre Bouvier Bernois.",
+      "Le Weinsberg CaraTour 600, c'est notre façon de voyager : pas d'itinéraire fixe, on dort où l'envie nous prend, et on prend le temps de kiffer la route, où qu'elle nous mène.",
+      "On vous laisse les clés avec plaisir, en espérant que le van vous fasse vivre de belles aventures. Bonne route !",
     ],
     quote: "Le bonheur n'est pas une destination à atteindre, mais une façon de voyager.",
     quoteAuthor: "Margaret Lee Runbeck",
@@ -400,7 +400,7 @@ export const siteConfig: SiteConfig = {
   rentalConditions: [
     { label: "Voyage à l'étranger", value: "Autorisé" },
     { label: "Permis de conduire", value: "Permis B" },
-    { label: "Animaux à bord", value: "Autorisé" },
+    { label: "Animaux à bord", value: "Autorisé - sauf sur les lits" },
     { label: "Véhicule fumeur", value: "Non autorisé" },
     { label: "Dépassement kilométrique", value: "0,25 € par km supplémentaire" },
   ],
@@ -459,7 +459,12 @@ export const siteConfig: SiteConfig = {
       icon: Flame,
       title: "Bouteille de gaz : robinet laissé ouvert",
       description:
-        "Le robinet de la bouteille de gaz reste ouvert en temps normal. Vous pouvez le fermer si vous le souhaitez : il se trouve dans le coffre dans la trappe de gauche.",
+"Le robinet de la bouteille de gaz reste ouvert normalement, mais vous pouvez le fermer si besoin : il est dans le coffre, trappe de gauche. Le petit logo flamme doit pointer vers le haut pour que le gaz passe. Après l'avoir rouvert, ça peut prendre quelques secondes avant que le feu arrive aux plaques, pas de panique. Si la bouteille est vide, contactez-nous avant d'en racheter une : on vous rembourse par virement dès réception du ticket de caisse, à nous envoyer sur WhatsApp."    },
+    {
+      icon: Zap,
+      title: "Électricité : que faire si la multiprise ne fonctionne pas",
+      description:
+        "Vérifiez d'abord le niveau et l'état sur l'app dédiée (LFP Block). Si la multiprise ne fonctionne pas, assurez-vous qu'elle est bien allumée et que l'interrupteur situé au niveau du lit à l'arrière est également en position allumée (lumière bleue).",
     },
     {
       icon: ArrowUpDown,
