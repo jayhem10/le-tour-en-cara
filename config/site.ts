@@ -230,7 +230,7 @@ export const siteConfig: SiteConfig = {
     { icon: Fuel, label: "Carburant utilisé", value: "Diesel" },
     { icon: Settings2, label: "Boîte de vitesse", value: "Manuelle" },
     { icon: Gauge, label: "Consommation", value: "de 10 à 12 l/100 km" },
-    { icon: Fuel, label: "Volume du réservoir de carburant", value: "60 l" },
+    { icon: Fuel, label: "Volume du réservoir de carburant", value: "80 l" },
     { icon: FlaskConical, label: "Additif", value: "AdBlue" },
     { icon: Droplet, label: "Volume du réservoir d'eau propre", value: "102 l" },
     { icon: Droplet, label: "Volume du réservoir d'eaux usées", value: "90 l" },
@@ -476,6 +476,18 @@ export const siteConfig: SiteConfig = {
       icon: Lock,
       title: "Avant de prendre la route : fenêtres et lanterneaux",
       description: "Pensez à bien verrouiller les fenêtres et à fermer les lanterneaux avant de démarrer.",
+    },
+    {
+      icon: AlertTriangle,
+      title: "Coffre extérieur : ne fermez jamais le verrou Thule avec les clés à l'intérieur",
+      description:
+        "Il n'existe pas de double de la clé du verrou Thule. Si vous fermez le coffre alors que les clés sont restées à l'intérieur, il sera bloqué et impossible à rouvrir. Vérifiez toujours que vous avez bien les clés en main avant de verrouiller.",
+    },
+    {
+      icon: Droplet,
+      title: "Vidanger les eaux grises (eaux usées)",
+      description:
+        "Sous le fourgon, en dessous de la caissette des toilettes, tournez la poignée noire puis inclinez le tuyau vers le bas pour laisser s'écouler l'eau grise.",
     },
   ],
 
