@@ -457,7 +457,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       icon: Flame,
-      title: "Bouteille de gaz : robinet laissé ouvert",
+      title: "Bouteille de gaz : comment ça marche",
       description:
 "Le robinet de la bouteille de gaz reste ouvert normalement, mais vous pouvez le fermer si besoin : il est dans le coffre, trappe de gauche. Le petit logo flamme doit pointer vers le haut pour que le gaz passe. Après l'avoir rouvert, ça peut prendre quelques secondes avant que le feu arrive aux plaques, pas de panique. Si la bouteille est vide, contactez-nous avant d'en racheter une : on vous rembourse par virement dès réception du ticket de caisse, à nous envoyer sur WhatsApp."    },
     {
