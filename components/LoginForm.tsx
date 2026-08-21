@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Loader2, Lock } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
@@ -80,6 +81,13 @@ export function LoginForm() {
           Accéder au site
         </Button>
       </form>
+
+      <Link
+        href="/mentions-legales"
+        className="mt-4 block text-center text-xs text-ink/50 underline underline-offset-4 hover:text-terracotta-dark"
+      >
+        Mentions légales
+      </Link>
     </div>
   );
 }

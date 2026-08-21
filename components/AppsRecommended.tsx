@@ -10,7 +10,7 @@ export function AppsRecommended() {
       {siteConfig.apps.map((app, index) => {
         const Icon = app.icon;
         return (
-          <ScrollReveal key={app.id} delay={index * 80}>
+          <ScrollReveal key={app.id} id={app.id} delay={index * 80} className="scroll-mt-20">
             <Card className="flex h-full flex-col gap-4">
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sauge-light/40 text-sauge-dark">

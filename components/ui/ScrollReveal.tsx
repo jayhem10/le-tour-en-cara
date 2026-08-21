@@ -7,10 +7,12 @@ interface ScrollRevealProps {
   className?: string;
   /** Délai d'apparition en ms, pour échelonner plusieurs éléments. */
   delay?: number;
+  /** Id optionnel, pour cibler l'élément via une ancre (ex: #lfp-block). */
+  id?: string;
 }
 
 /** Fait apparaître son contenu (fade + slide) quand il entre dans le viewport. */
-export function ScrollReveal({ children, className = "", delay = 0 }: ScrollRevealProps) {
+export function ScrollReveal({ children, className = "", delay = 0, id }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -35,6 +37,7 @@ export function ScrollReveal({ children, className = "", delay = 0 }: ScrollReve
   return (
     <div
       ref={ref}
+      id={id}
       className={`reveal ${visible ? "reveal-visible" : ""} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >

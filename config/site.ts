@@ -25,6 +25,7 @@ import {
   ShieldCheck,
   Shirt,
   ShowerHead,
+  Smartphone,
   Sparkles,
   Sun,
   Trash2,
@@ -56,10 +57,13 @@ export interface VehicleDimensions {
 }
 
 /** Une catégorie d'équipements (ex: Conduite, Cuisine / Repas) avec sa liste d'éléments */
+/** Un équipement listé dans une catégorie : simple texte, ou texte avec lien vers une autre section (ex: une app recommandée) */
+export type EquipmentItem = string | { text: string; link: { href: string; label: string } };
+
 export interface EquipmentCategory {
   icon: LucideIcon;
   title: string;
-  items: string[];
+  items: EquipmentItem[];
 }
 
 /** Une étape du mini-tutoriel "Comment ça marche" */
@@ -121,6 +125,8 @@ export interface ReturnGuidelineItem {
 /** Un point important à connaître avant de partir (ex: consignes de sécurité batterie) */
 export interface VanTip {
   icon: LucideIcon;
+  /** Gravité, utilisée pour trier et mettre en avant les conseils les plus critiques */
+  severity: "critical" | "important" | "info";
   title: string;
   description: string;
 }
@@ -313,7 +319,10 @@ export const siteConfig: SiteConfig = {
         "Panneaux solaires (100 W)",
         "Raccordement électrique + adaptateur",
         "Autonomie estimée : 3 jours",
-        "Batterie auxiliaire LiFePO4 (voir l'app LFP Block pour suivre le niveau)",
+        {
+          text: "Batterie auxiliaire LiFePO4",
+          link: { href: "#lfp-block", label: " (voir l'app LFP Block pour suivre le niveau)" },
+        },
       ],
     },
   ],
@@ -445,46 +454,68 @@ export const siteConfig: SiteConfig = {
   importantTips: [
     {
       icon: PowerOff,
+      severity: "critical",
       title: "Autoradio Kenwood : pensez à couper l'alimentation",
       description:
         "Après utilisation, remettez bien le réglage d'alimentation de l'autoradio Kenwood sur 0. Laissé allumé (même en veille), il continue de consommer du courant et peut vider la batterie du fourgon, rendant le démarrage impossible.",
     },
     {
       icon: AlertTriangle,
+      severity: "important",
       title: "Voyant AdBlue ou voyant huile allumé ? Prévenez-nous",
       description:
         "Si un voyant AdBlue ou niveau d'huile s'allume sur le tableau de bord pendant votre location, merci de nous prévenir rapidement afin qu'on puisse s'en occuper.",
     },
     {
+      icon: Gauge,
+      severity: "info",
+      title: "Bouton \"trip\" sur la manette droite : conso et autonomie",
+      description:
+        "Sur la manette droite (une manette au volant, comme celle du clignotant), un bouton \"trip\" permet d'afficher au tableau de bord la consommation et l'autonomie estimée restante.",
+    },
+    {
+      icon: Smartphone,
+      severity: "info",
+      title: "Apple CarPlay / Android Auto : branchez simplement le câble",
+      description:
+        "Reliez votre téléphone à l'autoradio avec le câble USB fourni : CarPlay (iPhone) ou Android Auto (Android) se lance automatiquement, sans réglage particulier.",
+    },
+    {
       icon: Flame,
+      severity: "info",
       title: "Bouteille de gaz : comment ça marche",
       description:
 "Le robinet de la bouteille de gaz reste ouvert normalement, mais vous pouvez le fermer si besoin : il est dans le coffre, trappe de gauche. Le petit logo flamme doit pointer vers le haut pour que le gaz passe. Après l'avoir rouvert, ça peut prendre quelques secondes avant que le feu arrive aux plaques, pas de panique. Si la bouteille est vide, contactez-nous avant d'en racheter une : on vous rembourse par virement dès réception du ticket de caisse, à nous envoyer sur WhatsApp."    },
     {
       icon: Zap,
+      severity: "info",
       title: "Électricité : que faire si la multiprise ne fonctionne pas",
       description:
         "Vérifiez d'abord le niveau et l'état sur l'app dédiée (LFP Block). Si la multiprise ne fonctionne pas, assurez-vous qu'elle est bien allumée et que l'interrupteur situé au niveau du lit à l'arrière est également en position allumée (lumière bleue).",
     },
     {
       icon: ArrowUpDown,
+      severity: "important",
       title: "Toit relevable (popup) : attention à l'ouverture et à la fermeture",
       description:
         "À l'ouverture, la popup prend pas mal de hauteur : vérifiez qu'aucun obstacle ne gêne, pour ne pas l'abîmer ni endommager le panneau solaire. À la fermeture, verrouillez bien la partie métallique sans coincer la bâche, et enclenchez toutes les boucles à clip.",
     },
     {
       icon: Lock,
+      severity: "important",
       title: "Avant de prendre la route : fenêtres et lanterneaux",
       description: "Pensez à bien verrouiller les fenêtres et à fermer les lanterneaux avant de démarrer.",
     },
     {
       icon: AlertTriangle,
+      severity: "critical",
       title: "Coffre extérieur : ne fermez jamais le verrou Thule avec les clés à l'intérieur",
       description:
         "Il n'existe pas de double de la clé du verrou Thule. Si vous fermez le coffre alors que les clés sont restées à l'intérieur, il sera bloqué et impossible à rouvrir. Vérifiez toujours que vous avez bien les clés en main avant de verrouiller.",
     },
     {
       icon: Droplet,
+      severity: "info",
       title: "Vidanger les eaux grises (eaux usées)",
       description:
         "Sous le fourgon, en dessous de la caissette des toilettes, tournez la poignée noire puis inclinez le tuyau vers le bas pour laisser s'écouler l'eau grise.",

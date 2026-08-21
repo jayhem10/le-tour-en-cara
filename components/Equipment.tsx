@@ -19,12 +19,26 @@ export function Equipment() {
                 <h3 className="font-display text-lg font-semibold text-ink">{category.title}</h3>
               </div>
               <ul className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
-                {category.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-ink/80">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-sauge-dark" aria-hidden />
-                    {item}
-                  </li>
-                ))}
+                {category.items.map((item) => {
+                  const text = typeof item === "string" ? item : item.text;
+                  const link = typeof item === "string" ? undefined : item.link;
+                  return (
+                    <li key={text} className="flex items-start gap-2 text-sm text-ink/80">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-sauge-dark" aria-hidden />
+                      <span>
+                        {text}
+                        {link && (
+                          <a
+                            href={link.href}
+                            className="font-medium text-sauge-dark underline underline-offset-2 hover:text-sauge"
+                          >
+                            {link.label}
+                          </a>
+                        )}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </Card>
           </ScrollReveal>

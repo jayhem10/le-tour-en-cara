@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { LogOut } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -29,15 +30,24 @@ export function Footer() {
           <img src="/globe.png" alt="" width={14} height={14} className="shrink-0" aria-hidden />©{" "}
           {new Date().getFullYear()} {siteConfig.general.vanName}. Site privé réservé aux locataires.
         </p>
-        <button
-          type="button"
-          onClick={handleLogout}
-          disabled={loggingOut}
-          className="inline-flex items-center gap-1.5 text-xs text-ink/50 underline underline-offset-4 hover:text-terracotta-dark disabled:opacity-60"
-        >
-          <LogOut className="h-3.5 w-3.5" aria-hidden />
-          Se déconnecter
-        </button>
+        <div className="flex items-center gap-4">
+          <Link
+            href="/mentions-legales"
+            className="text-xs text-ink/50 underline underline-offset-4 hover:text-terracotta-dark"
+          >
+            Mentions légales
+          </Link>
+          <button
+            type="button"
+            onClick={handleLogout}
+            disabled={loggingOut}
+            className="inline-flex items-center gap-1.5 text-xs text-ink/50 underline underline-offset-4 hover:text-terracotta-dark disabled:opacity-60"
+          >
+            <LogOut className="h-3.5 w-3.5" aria-hidden />
+            Se déconnecter
+          </button>
+        </div>
+        <p className="text-xs text-ink/40">Site réalisé par Jayhem</p>
       </div>
     </footer>
   );

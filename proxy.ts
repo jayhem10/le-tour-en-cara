@@ -28,6 +28,7 @@ export const config = {
   matcher: [
     // photos/globe.png restent accessibles sans session : nécessaires pour que l'aperçu og:image
     // fonctionne quand le lien est partagé (le crawler n'a pas de cookie de session).
-    "/((?!_next/static|_next/image|favicon.ico|robots.txt|login|api/login|api/logout|photos|globe.png).*)",
+    // mentions-legales doit rester accessible même sans connexion (obligation légale).
+    "/((?!_next/static|_next/image|favicon.ico|robots.txt|login|api/login|api/logout|photos|globe.png|mentions-legales).*)",
   ],
 };
