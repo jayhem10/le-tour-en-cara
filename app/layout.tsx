@@ -80,6 +80,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="fr"
       className={`${poppins.variable} ${inter.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col bg-cream text-ink">
         {children}

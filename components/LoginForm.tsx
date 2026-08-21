@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Loader2, Lock } from "lucide-react";
+import { Eye, EyeOff, Loader2, Lock } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
@@ -13,6 +13,7 @@ export function LoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -56,18 +57,28 @@ export function LoginForm() {
           <label htmlFor="password" className="text-sm font-medium text-ink">
             Mot de passe d&apos;accès
           </label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            required
-            autoFocus
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            aria-invalid={Boolean(error)}
-            aria-describedby={error ? "password-error" : undefined}
-            className="rounded-xl border border-sable-dark/60 bg-cream px-4 py-3 text-ink outline-none transition-colors focus:border-terracotta focus:ring-2 focus:ring-terracotta/30"
-          />
+          <div className="relative">
+            <input
+              id="password"
+              name="password"
+              type={showPassword ? "text" : "password"}
+              required
+              autoFocus
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              aria-invalid={Boolean(error)}
+              aria-describedby={error ? "password-error" : undefined}
+              className="w-full rounded-xl border border-sable-dark/60 bg-cream px-4 py-3 pr-11 text-ink outline-none transition-colors focus:border-terracotta focus:ring-2 focus:ring-terracotta/30"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword((current) => !current)}
+              aria-label={showPassword ? "Masquer le mot de passe" : "Afficher le mot de passe"}
+              className="absolute inset-y-0 right-0 flex items-center px-3 text-ink/50 hover:text-terracotta-dark"
+            >
+              {showPassword ? <EyeOff className="h-4 w-4" aria-hidden /> : <Eye className="h-4 w-4" aria-hidden />}
+            </button>
+          </div>
         </div>
 
         {error && (
