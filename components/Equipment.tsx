@@ -59,7 +59,8 @@ export function Equipment() {
             <section>
               <h4 className="font-semibold text-ink">Chauffage</h4>
               <p className="mt-2 text-sm leading-relaxed text-ink/70">
-                Sur le panneau Truma, activez le mode chauffage puis réglez la température souhaitée.
+                Sur le panneau Truma, activez le mode chauffage puis réglez la température souhaitée. Pensez à
+                ouvrir les aérations du bas et, si besoin, celle de la popup.
               </p>
             </section>
             <section>
